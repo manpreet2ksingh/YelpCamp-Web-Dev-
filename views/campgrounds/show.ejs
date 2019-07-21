@@ -1,0 +1,19 @@
+<% include ../partials/header.ejs %>
+
+<div class = "jumbotron" style="text-align:center">
+    <h1><%= campground.name %></h1>
+</div>
+
+<div class ="thumbnail">
+    <img src="<%= campground.image %>" alt="camps">
+</div>
+
+<p>
+    <a href="/campgrounds/<%= campground._id %>/comments/new" role="button" class="btn btn-success">Add New Comment</a>
+</p>
+
+<p>
+    <%= campground.comments %>
+</p>
+
+<% include ../partials/footer.ejs %>
